@@ -1,0 +1,16 @@
+<div class="container">
+  <mat-card class="example-card">
+    <img mat-card-image [src]="house.image">
+    <mat-card-content>
+      <p>
+        Price ${{house.price}}
+      </p>
+      <p>
+        {{house.onSale | onSaleState}}
+      </p>
+      <p>
+        {{house.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

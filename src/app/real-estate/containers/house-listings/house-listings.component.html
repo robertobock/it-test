@@ -1,0 +1,9 @@
+<app-houses-filters
+  [cities]="cities$ | async"
+  [filters]="filters$ | async"
+  (filtersChange)="onFiltersChange($event)">
+</app-houses-filters>
+
+<app-houses-list
+  [houses]="houses$ | async">
+</app-houses-list>

@@ -1,0 +1,61 @@
+<div class="container">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Filters
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <ng-select [items]="cities"
+                   bindLabel="name"
+                   placeholder="City"
+                   formControlName="cityId">
+                </ng-select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <input matInput placeholder="Price less than"
+                    [value]="undefined" type="number" formControlName="priceLessThan">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row label-padding">
+              <div class="col">
+                <label>On Sale:</label>
+              </div>
+            </div>
+            <div class="row radio-padding">
+              <div class="col">
+                <mat-radio-group formControlName="onSale" [value]="undefined">
+                  <div class="row">
+                    <div class="col">
+                      <mat-radio-button [value]="undefined">All</mat-radio-button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <mat-radio-button [value]="true">Yes</mat-radio-button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <mat-radio-button [value]="false">No</mat-radio-button>
+                    </div>
+                  </div>
+                </mat-radio-group>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" mat-raised-button color="primary">Search</button>
+      </form>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

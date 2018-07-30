@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-
+import { NgSelectModule } from '@ng-select/ng-select';
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -17,7 +19,8 @@ import { AppComponent } from './app.component';
         path: 'real-estate',
         loadChildren: './real-estate/real-estate.module#RealEstateModule'
       }
-    ])
+    ]),
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
