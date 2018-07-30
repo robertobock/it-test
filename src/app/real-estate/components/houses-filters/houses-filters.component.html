@@ -12,6 +12,7 @@
             <div class="row">
               <div class="col">
                 <ng-select [items]="cities"
+                   class="filter-cities"
                    bindLabel="name"
                    placeholder="City"
                    formControlName="cityId">
@@ -22,7 +23,8 @@
               <div class="col">
                 <mat-form-field class="full-width">
                   <input matInput placeholder="Price less than"
-                    [value]="undefined" type="number" formControlName="priceLessThan">
+                    [value]="undefined" type="number" formControlName="priceLessThan"
+                      class="filter-price-less-than">
                 </mat-form-field>
               </div>
             </div>
@@ -33,7 +35,8 @@
             </div>
             <div class="row radio-padding">
               <div class="col">
-                <mat-radio-group formControlName="onSale" [value]="undefined">
+                <mat-radio-group formControlName="onSale" [value]="undefined"
+                  class="filter-on-sale">
                   <div class="row">
                     <div class="col">
                       <mat-radio-button [value]="undefined">All</mat-radio-button>

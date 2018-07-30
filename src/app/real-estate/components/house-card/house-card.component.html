@@ -1,14 +1,17 @@
 <div class="container">
   <mat-card class="example-card">
-    <img mat-card-image [src]="house.image">
+    <mat-card-header>
+      <mat-card-title class="big house-title">{{house.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="house.image" class="house-image">
     <mat-card-content>
-      <p>
+      <p class="house-price">
         Price ${{house.price}}
       </p>
-      <p>
+      <p class="house-on-sale">
         {{house.onSale | onSaleState}}
       </p>
-      <p>
+      <p class="house-description">
         {{house.description}}
       </p>
     </mat-card-content>

@@ -32,10 +32,7 @@ export class HousesFiltersComponent {
   }
 
   ngOnInit() {
-    this.cities.unshift({
-      id : 0,
-      name : "All"
-    });
+    
   }
 
   private checkValues(params:any){
